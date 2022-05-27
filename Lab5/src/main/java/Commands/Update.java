@@ -1,9 +1,11 @@
 package Commands;
 
-import Core.CollectionManager;
-import Core.CommandAsker;
-import Core.InputChecker;
-
+import Helpers.CollectionManager;
+import Helpers.CommandAsker;
+import Helpers.InputChecker;
+/**
+ * class for command 'update' to update element in collection by id
+ */
 public class Update extends AbstractCommand{
     private final CollectionManager collectionManager;
     private final InputChecker inputChecker;
@@ -13,6 +15,11 @@ public class Update extends AbstractCommand{
         this.inputChecker = checker;
         this.commandAsker = asker;
     }
+
+    /**
+     *@return if command successfully executed
+     * @param argument
+     */
     @Override
     public boolean execute(String argument) {
         if(inputChecker.integerValidChecker(argument,0,Integer.MAX_VALUE)){

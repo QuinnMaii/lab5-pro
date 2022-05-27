@@ -1,4 +1,8 @@
 package Commands;
+/**
+ * class for command 'help'
+ * @return if command successfully executed
+ */
 
 public class Help extends AbstractCommand{
     public boolean execute(){
@@ -15,14 +19,13 @@ public class Help extends AbstractCommand{
         System.out.println("execute_script file_name                 - read and execute script from corresponding file. The script\n" +
                            "                                           contains commands in the same form in which the user enters them\n"+
                            "                                           interactively.");
+        System.out.println("remove_greater {element}                 -  remove from the collection all elements greater than the given");
+        System.out.println("remove_lower {element}                   -  remove from the collection all elements lower than the given");
         System.out.println("exit                                     - end the program without saving to file");
         System.out.println("add_if_max {element}                     - add a new item to the collection if its value is greater than the \n"+
                            "                                           value of the largest item in this collection");
         System.out.println("history:                                 - print last 7 command (without argument)");
-        System.out.println("print_field_ascending_distance {element} - display the values of the distance field of all elements in ascending order");
-        System.out.println("print_unique_distance name               - display the unique values of the distance field of all elements in the collection");
-        System.out.println("print_descending                         - print the values of the manufacturer field of all elements in descending\n"+
-                           "                                           order");
+        System.out.println("print_unique_color                       - display the unique color of all elements in the collection");
 
         return true;
     }

@@ -1,20 +1,32 @@
 package Data;
-
+/**
+ * class for coordinates values (x, y)
+ */
 public class Coordinates {
-    private final Integer x;
-    private final Long y;
+    private final Long x;
+    private final Float y;
 
 
-    public Coordinates(Integer x, Long y) {
+    public Coordinates(Long x, Float y) {
         this.x = x;
         this.y = y;
     }
 
-    public Integer getX() {
+    public Long getX() {
         return x;
     }
 
-    public Long getY() {
+    /**
+     *
+     * @return X coordinate
+     */
+
+    public Float getY() {
         return y;
     }
+
+    /**
+     *
+     * @return y coordinate
+     */
 }

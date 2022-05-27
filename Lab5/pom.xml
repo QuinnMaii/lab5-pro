@@ -35,6 +35,13 @@
             <type>maven-plugin</type>
         </dependency>
 
+
+
+        <dependency>
+            <groupId>com.opencsv</groupId>
+            <artifactId>opencsv</artifactId>
+            <version>5.3</version>
+        </dependency>
         <dependency>
             <groupId>com.googlecode.json-simple</groupId>
             <artifactId>json-simple</artifactId>
@@ -88,7 +95,6 @@
             </plugin>
         </plugins>
     </reporting>
-
 
 
 </project>

@@ -1,7 +1,10 @@
 package Commands;
 
-import Core.CollectionManager;
-
+import Helpers.CollectionManager;
+/**
+ * class for command claer all the element from the collection
+ * @return if command successfully executed
+ */
 public class Clear extends AbstractCommand{
     private final CollectionManager collectionManager;
 

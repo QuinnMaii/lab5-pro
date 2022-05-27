@@ -1,9 +1,24 @@
 package Data;
 
 public enum DragonCharacter {
-    CHAOTIC,
-    CHAOTIC_EVIL,
-    FICKLE;
+    CHAOTIC{
+        @Override
+        public String toString() {
+            return "CHAOTIC";
+        }
+    },
+    CHAOTIC_EVIL{
+        @Override
+        public String toString() {
+            return " CHAOTIC_EVIL";
+        }
+    },
+    FICKLE{
+        @Override
+        public String toString() {
+            return " FICKLE";
+        }
+    };
 
     /**
      *

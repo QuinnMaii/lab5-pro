@@ -1,5 +1,7 @@
 package Commands;
-
+/**
+        * Abstract Command class contains Object methods, name and description.
+        */
 public abstract class AbstractCommand implements ICommands{
     @Override
     public boolean execute(String argument){
@@ -11,4 +13,6 @@ public abstract class AbstractCommand implements ICommands{
     }
 }
 
-//The class the sets the execution to false all things been equal
+/**
+ * The class the sets the execution to false all things been equal
+ */

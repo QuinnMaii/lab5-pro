@@ -1,9 +1,25 @@
 package Data;
 
 public enum Color {
-    GREEN,
-    RED,
-    ORANGE;
+    GREEN{
+        @Override
+        public String toString() {
+            return "GREEN";
+        }
+    },
+    RED
+    {
+        @Override
+        public String toString() {
+        return "RED";
+    }
+    },
+    ORANGE{
+        @Override
+        public String toString() {
+            return "ORANGE";
+        }
+    };
 
         /**
          *
@@ -16,4 +32,5 @@ public enum Color {
             }
             return nameList.substring(0, nameList.length()-2);
         }
+
 }

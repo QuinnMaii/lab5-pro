@@ -1,7 +1,10 @@
 package Commands;
 
-import Core.CollectionManager;
-
+import Helpers.CollectionManager;
+/**
+ * class for command 'save' to save
+ * @return if command successfully executed
+ */
 public class Save extends AbstractCommand{
     private final CollectionManager collectionManager;
 

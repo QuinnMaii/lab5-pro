@@ -1,20 +1,26 @@
 package Data;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
+/**
+ * class with main type of element in collection
+ */
 public class Dragon {
     private int id;
     private String name;
     private Coordinates coordinates;
-    private java.util.Date creationDate;
+    private String creationDate;
     private DragonType type;
 
     private DragonCharacter character;
-    private DragonCave depth;
+    private float depth;
     private Color color;
     private int age;
 
-    public Dragon(int id, String name, Coordinates coordinates, Date creationDate, DragonType type, DragonCharacter character, DragonCave cave, Color color, int age) {
+    public Dragon(int id, String name, Coordinates coordinates, String creationDate, DragonType type, DragonCharacter character, float cave, Color color, int age) {
         this.id = id;
         this.name = name;
         this.coordinates = coordinates;
@@ -30,6 +36,10 @@ public class Dragon {
 
     }
 
+    /**
+     *
+     * @return id of Dragon
+     */
     public int getId() {
         return id;
     }
@@ -38,6 +48,10 @@ public class Dragon {
         this.id = id;
     }
 
+    /**
+     *
+     * @return name of Dragon
+     */
     public String getName() {
         return name;
     }
@@ -46,6 +60,10 @@ public class Dragon {
         this.name = name;
     }
 
+    /**
+     *
+     * @return coordinates of Dragon
+     */
     public Coordinates getCoordinates() {
         return coordinates;
     }
@@ -54,14 +72,26 @@ public class Dragon {
         this.coordinates = coordinates;
     }
 
-    public Date getCreationDate() {
+    public String getCreationDate() {
+        String pattern = "MM/dd/yyyy";
+        DateFormat df = new SimpleDateFormat(pattern);
+        Date today = Calendar.getInstance().getTime();
+        String creationDate = df.format(today);
         return creationDate;
     }
 
-    public void setCreationDate(Date creationDate) {
+    /**
+     *
+     * @return the date today
+     */
+    public void setCreationDate(String creationDate) {
         this.creationDate = creationDate;
     }
 
+    /**
+     *
+     * @return type of Dragon
+     */
     public DragonType getType() {
         return type;
     }
@@ -70,6 +100,10 @@ public class Dragon {
         this.type = type;
     }
 
+    /**
+     *
+     * @return character of Dragon
+     */
     public DragonCharacter getCharacter() {
         return character;
     }
@@ -78,14 +112,22 @@ public class Dragon {
         this.character = character;
     }
 
-    public DragonCave getCave() {
+    /**
+     *
+     * @return the length of the cave of Dragon
+     */
+    public float getCave() {
         return depth;
     }
 
-    public void setCave(DragonCave depth) {
+    public void setCave(float depth) {
         this.depth = depth;
     }
 
+    /**
+     *
+     * @return color of Dragon
+     */
     public Color getColor() {
         return color;
     }
@@ -94,6 +136,10 @@ public class Dragon {
         this.color = color;
     }
 
+    /**
+     *
+     * @return age of Dragon
+     */
     public int getAge() {
         return age;
     }
@@ -101,19 +147,22 @@ public class Dragon {
     public void setAge(int age) {
         this.age = age;
     }
-
+    /**
+     *
+     * @return String with all fields
+     */
     public String toString(){
-        return "Dragon{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", coordinates=" + coordinates +
-                ", creationDate=" + creationDate +
-                ", age=" + age +
-                ", color=" + color +
-                ", type=" + type +
-                ", character=" + character +
-                ", cave=" + depth +
-                '}';
+        return "Dragon" + "\r\n"+
+                "id," + id + "\r\n" +
+                "name,'" + name + "\r\n" +
+                "coordinates," + coordinates.getX() + ","  +coordinates.getY() + "\r\n"+
+                "date,," + creationDate +"\r\n"+
+                "age," + age +"\r\n"+
+                "color," + color +"\r\n"+
+                "type," + type +"\r\n"+
+                "character," + character +"\r\n"+
+                "cave," + depth;
+
     }
 
     public double compareTo(Object o) {

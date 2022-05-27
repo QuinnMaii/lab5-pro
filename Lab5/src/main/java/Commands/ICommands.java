@@ -6,4 +6,6 @@ ICommands {
     boolean execute();
 }
 
-//The interface for execution of commands
+/**
+ * The interface for execution of commands
+ */

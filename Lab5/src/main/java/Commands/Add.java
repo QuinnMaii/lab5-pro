@@ -1,8 +1,10 @@
 package Commands;
 
-import Core.CollectionManager;
-import Core.CommandAsker;
-
+import Helpers.CollectionManager;
+import Helpers.CommandAsker;
+/**
+ * class for command 'add' to add elements to collection
+ */
 public class Add extends AbstractCommand{
     private final CollectionManager collectionManager;
     private final CommandAsker commandAsker;

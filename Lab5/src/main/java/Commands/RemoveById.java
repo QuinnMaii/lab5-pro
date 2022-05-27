@@ -1,8 +1,12 @@
 package Commands;
 
-import Core.CollectionManager;
-import Core.InputChecker;
+import Helpers.CollectionManager;
+import Helpers.InputChecker;
 
+/**
+ * class for command 'remove_by_id
+ * @return if command successfully executed
+ */
 public class RemoveById extends AbstractCommand{
     private final CollectionManager collectionManager;
     private final InputChecker inputChecker;

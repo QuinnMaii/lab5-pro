@@ -1,7 +1,7 @@
 package Commands;
 
-import Core.CollectionManager;
-import Core.InputChecker;
+import Helpers.CollectionManager;
+import Helpers.InputChecker;
 
 public class PrintUniqueColor extends AbstractCommand{
     private final CollectionManager collectionManager;

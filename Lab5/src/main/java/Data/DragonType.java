@@ -1,10 +1,30 @@
 package Data;
 
 public enum DragonType {
-    WATER,
-    UNDERGROUND,
-    AIR,
-    FIRE;
+    WATER{
+        @Override
+        public String toString() {
+            return "WATER";
+        }
+    },
+    UNDERGROUND{
+        @Override
+        public String toString() {
+            return "UNDERGROUND";
+        }
+    },
+    AIR{
+        @Override
+        public String toString() {
+            return "AIR";
+        }
+    },
+    FIRE{
+        @Override
+        public String toString() {
+            return "FIRE";
+        }
+    };
 
     /**
      * @return String with all types

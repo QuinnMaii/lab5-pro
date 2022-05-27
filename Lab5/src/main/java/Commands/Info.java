@@ -1,7 +1,10 @@
 package Commands;
 
-import Core.CollectionManager;
+import Helpers.CollectionManager;
 
+/**
+ * class for command 'info' to print information about collection
+ */
 public class Info extends AbstractCommand{
     private final CollectionManager collectionManager;
 
@@ -9,6 +12,9 @@ public class Info extends AbstractCommand{
         this.collectionManager = collectionManager;
     }
 
+    /**
+     * @return if command successfully executed
+     */
     @Override
     public boolean execute(){
         System.out.println("Collection's type: ArrayDeque");

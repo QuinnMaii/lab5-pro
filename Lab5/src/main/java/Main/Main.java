@@ -1,17 +1,19 @@
 package Main;
 
 import Commands.*;
-import Core.*;
+import Helpers.*;
 
 
+import java.io.FileNotFoundException;
 import java.util.Scanner;
-
+/**
+ * Main method to run the program
+ */
 public class Main {
-    //static final String FILE_PATH = "src/main/java/Files/";
     static String filename;
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         try{
             System.out.println("START");
             filename = args[0];
@@ -22,7 +24,7 @@ public class Main {
         }
         System.out.println("write 'help' to know the available commands");
         CollectionManager collectionManager = new CollectionManager();
-        collectionManager.readInputFromJSONFile(filename);
+        collectionManager.readInputFromCSVFile(filename);
         InputChecker inputChecker = new InputChecker();
         CommandAsker commandAsker = new CommandAsker(inputChecker);
         CommandManager commandManager = new CommandManager(
